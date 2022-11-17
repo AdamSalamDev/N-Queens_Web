@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>N-Queen</title>
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <div id = "box">
+
+            <div class="board"></div>
+
+            <div class="buttonBox">
+
+                <button id="Refresh">Refresh</button>
+    
+                <input type="text" maxlength = "2" id="SizeTextBox">
+    
+                <label id="msg">Calculating...</label>
+               
+            </div>
+
+        </div>
+
+        <div class = "infoArea">
+            
+            <p id = "infoText">
+                <h2><strong>Genetic Algorithm: N-Queens</strong></h2>
+
+                <strong>Objective</strong><br>
+                Place n queens on an n sized board such that no queen intersects
+                with another.<br><br>
+                
+                <strong>Procedure</strong><br>
+
+                -   1. Create a population of random board states.<br>
+                -   2. Pick survivors from the population.<br>
+                -   3. Crossover survivors' genes to make child states.<br>
+                -   4. Children have a random chance for mutation.<br>
+                -   5. Generate a new population from those child states.<br>
+                Repeat steps 2 - 5 until one of child states is a goal state.
+
+                <br><br>
+
+                <strong>Description</strong><br>
+                This GA in particular uses the Adam & Eve approach for the survival function. 
+                It picks the best two board states from the current population. 
+                From there, those two board states will crossover and make exactly the same amount of children as the previous generation. 
+                Finally, there is a fifty percent chance of gene mutation per child.
+                If a mutation occurs, two genes are chosen at random and swap places.
+
+                <br><br>
+
+                <strong>Analysis</strong><br>
+                Tbd...
+            </p>
+            
+        </div>  
+
+    </div>
+
+    <div id="trailer"></div>
+    <script src="Driver.js"></script>
+    <script src="N-Queen.js"></script>
+
+</body>
+</html>
